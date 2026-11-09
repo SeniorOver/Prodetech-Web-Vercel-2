@@ -4,8 +4,13 @@ import {
   Crosshair, Factory, Headphones, Menu, PenTool, ShieldCheck, Sparkles, X,
 } from 'lucide-react'
 
-// Actualiza este número con el WhatsApp comercial de Prodetech (código de país incluido, sin + ni espacios).
-const WHATSAPP_NUMBER = ''
+// Ecuador: al número local 0960701199 se le quita el 0 inicial y se antepone el código 593.
+const WHATSAPP_NUMBER = '593960701199'
+const DISPLAY_PHONE = '+593 96 070 1199'
+const SOCIAL_LINKS = {
+  facebook: 'https://www.facebook.com/PRODETECH.Ingenieria.y.Desarrollo/',
+  instagram: 'https://www.instagram.com/prodetechec/',
+}
 const waLink = (message) => WHATSAPP_NUMBER
   ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
   : `https://wa.me/?text=${encodeURIComponent(message)}`
@@ -118,7 +123,7 @@ function App() {
       <section className="closing-cta"><div className="wrap closing-inner"><div className="closing-glow"/><div className="eyebrow"><span className="eyebrow-line"/> TU PRÓXIMO PROYECTO EMPIEZA AQUÍ</div><h2>¿Qué quieres<br /><span>crear hoy?</span></h2><p>Conversemos sobre tu idea. Te ayudamos a encontrar el equipo y el camino para hacerla realidad.</p><a className="button" href={waLink('Hola Prodetech, quiero conversar sobre mi próximo proyecto.')}>Hablemos de tu proyecto <ArrowRight size={16}/></a><div className="closing-side">PRODETECH<br/>QUITO · ECUADOR</div></div></section>
     </main>
 
-    <footer className="site-footer"><div className="wrap footer-main"><div><Brand/><p>Tecnología láser para crear,<br/>producir y crecer.</p></div><div className="footer-col"><strong>EXPLORA</strong><a href="#soluciones">Soluciones</a><a href="#equipos">Equipos</a><a href="#aplicaciones">Aplicaciones</a></div><div className="footer-col"><strong>ACOMPAÑAMIENTO</strong><a href="#nosotros">Asesoría</a><a href="#nosotros">Capacitación</a><a href="#nosotros">Soporte técnico</a></div><div className="footer-contact"><strong>¿TIENES UN PROYECTO?</strong><a href={waLink('Hola Prodetech, quiero información sobre sus equipos.')}>Conversemos <ArrowUpRight size={14}/></a><span>Quito, Ecuador</span></div></div><div className="wrap footer-bottom"><span>© {new Date().getFullYear()} Prodetech · Tecnología láser, Ecuador.</span><span>HECHO PARA CREAR.</span></div></footer>
+    <footer className="site-footer"><div className="wrap footer-main"><div><Brand/><p>Tecnología láser para crear,<br/>producir y crecer.</p></div><div className="footer-col"><strong>EXPLORA</strong><a href="#soluciones">Soluciones</a><a href="#equipos">Equipos</a><a href="#aplicaciones">Aplicaciones</a></div><div className="footer-col"><strong>ACOMPAÑAMIENTO</strong><a href="#nosotros">Asesoría</a><a href="#nosotros">Capacitación</a><a href="#nosotros">Soporte técnico</a></div><div className="footer-contact"><strong>¿TIENES UN PROYECTO?</strong><a href={waLink('Hola Prodetech, quiero información sobre sus equipos.')}>WhatsApp <ArrowUpRight size={14}/></a><a className="footer-phone" href="tel:+593960701199">{DISPLAY_PHONE}</a><div className="footer-socials"><a href={SOCIAL_LINKS.facebook} target="_blank" rel="noreferrer">Facebook <ArrowUpRight size={12}/></a><a href={SOCIAL_LINKS.instagram} target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={12}/></a></div><span>Quito, Ecuador</span></div></div><div className="wrap footer-bottom"><span>© {new Date().getFullYear()} Prodetech · Tecnología láser, Ecuador.</span><span>HECHO PARA CREAR.</span></div></footer>
     <a className="floating-contact" href={waLink('Hola Prodetech, quisiera asesoría sobre una máquina láser.')} aria-label="Solicitar asesoría por WhatsApp"><Headphones size={19}/><span>Hablemos</span></a>
   </>
 }

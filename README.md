@@ -11,7 +11,7 @@ npm run dev
 
 ## Configurar WhatsApp
 
-En `src/App.jsx`, completa `WHATSAPP_NUMBER` con el número comercial en formato internacional, sin `+`, espacios ni guiones. Ejemplo de formato: `5939XXXXXXXX`. Mientras el número esté vacío, los botones abrirán WhatsApp para que el visitante elija el contacto.
+El WhatsApp comercial y las redes de Facebook e Instagram están configurados en `src/App.jsx`. Para cambiar el contacto, actualiza `WHATSAPP_NUMBER` con formato internacional y sin `+`, espacios ni guiones, y ajusta `DISPLAY_PHONE` para mostrar el teléfono legible.
 
 ## Desplegar en Vercel
 
