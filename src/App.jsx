@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import {
   ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown,
   Crosshair, Factory, Headphones, Menu, PenTool, ShieldCheck, Sparkles, X,
@@ -125,6 +127,8 @@ function App() {
 
     <footer className="site-footer"><div className="wrap footer-main"><div><Brand/><p>Tecnología láser para crear,<br/>producir y crecer.</p></div><div className="footer-col"><strong>EXPLORA</strong><a href="#soluciones">Soluciones</a><a href="#equipos">Equipos</a><a href="#aplicaciones">Aplicaciones</a></div><div className="footer-col"><strong>ACOMPAÑAMIENTO</strong><a href="#nosotros">Asesoría</a><a href="#nosotros">Capacitación</a><a href="#nosotros">Soporte técnico</a></div><div className="footer-contact"><strong>¿TIENES UN PROYECTO?</strong><a href={waLink('Hola Prodetech, quiero información sobre sus equipos.')}>WhatsApp <ArrowUpRight size={14}/></a><a className="footer-phone" href="tel:+593960701199">{DISPLAY_PHONE}</a><div className="footer-socials"><a href={SOCIAL_LINKS.facebook} target="_blank" rel="noreferrer">Facebook <ArrowUpRight size={12}/></a><a href={SOCIAL_LINKS.instagram} target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={12}/></a></div><span>Quito, Ecuador</span></div></div><div className="wrap footer-bottom"><span>© {new Date().getFullYear()} Prodetech · Tecnología láser, Ecuador.</span><span>HECHO PARA CREAR.</span></div></footer>
     <a className="floating-contact" href={waLink('Hola Prodetech, quisiera asesoría sobre una máquina láser.')} aria-label="Solicitar asesoría por WhatsApp"><Headphones size={19}/><span>Hablemos</span></a>
+    <Analytics />
+    <SpeedInsights />
   </>
 }
 
